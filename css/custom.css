@@ -1,0 +1,498 @@
+@font-face {
+  src: url(../fonts/DandeleonVintageDemo.otf);
+  font-family: dandel;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  background: #34495e;
+}
+
+.display-none {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.logo {
+  width: 100%;
+}
+
+.logo .logo_image {
+  width: 100px;
+  height: 100px;
+  background: white;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.error_section {
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0px;
+  background: rgba(183, 28, 28, 0.8);
+  color: white;
+  padding: 10px;
+  z-index: 5;
+}
+
+.error_section h1, .error_section p {
+  margin: 0 !important;
+}
+
+.main_body {
+  width: 100%;
+}
+
+.main_body .container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (minmax(2px, auto))[3];
+      grid-template-rows: repeat(3, minmax(2px, auto));
+}
+
+.main_body .wifi_login_details {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.95)));
+  background: linear-gradient(rgba(255, 255, 255, 0.95));
+  padding: 40px;
+  height: 350px;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  z-index: 2;
+  margin-top: 50px;
+  position: relative;
+}
+
+.main_body .wifi_login_details .outline {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid #969696;
+  background: transparent;
+  z-index: -1;
+}
+
+.main_body .wifi_login_details .top {
+  text-align: center;
+}
+
+.main_body .wifi_login_details .top h1 {
+  font-size: 1.5625em;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.main_body .wifi_login_details .top p {
+  font-size: 0.75em;
+}
+
+.main_body .wifi_login_details .top span {
+  font-weight: bolder;
+}
+
+.main_body .wifi_login_details form {
+  margin-top: 10px;
+}
+
+.main_body .wifi_login_details form input[type="text"] {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #171717;
+  padding: 10px 0;
+  border-bottom: 1px solid #969696;
+  margin: 12px 0;
+  font-size: 0.8125em;
+  background: none;
+}
+
+.main_body .wifi_login_details form ::-webkit-input-placeholder {
+  color: #969696;
+  font-weight: bolder;
+}
+
+.main_body .wifi_login_details form :-ms-input-placeholder {
+  color: #969696;
+  font-weight: bolder;
+}
+
+.main_body .wifi_login_details form ::-ms-input-placeholder {
+  color: #969696;
+  font-weight: bolder;
+}
+
+.main_body .wifi_login_details form ::placeholder {
+  color: #969696;
+  font-weight: bolder;
+}
+
+.main_body .wifi_login_details form p {
+  font-size: 0.8123em;
+}
+
+.main_body .wifi_login_details form p span {
+  font-weight: bolder;
+  cursor: pointer;
+  color: #1976d2;
+}
+
+.main_body .wifi_login_details form .btn {
+  background: #A554BD;
+  outline: none;
+  border: none;
+  color: white;
+  display: inline;
+  padding: 10px 30px;
+  font-size: 0.8125em;
+  cursor: pointer;
+}
+
+.main_body .wifi_login_details form .code_not_rec {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.main_body .wifi_login_details form .code_not_rec h4 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.main_body .wifi_login_details form .code_not_rec p {
+  margin: 0;
+  font-weight: bolder;
+}
+
+.main_body .wifi_login_details form .next {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.main_body .wifi_login_details form .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.main_body .wifi_login_details form .previous_btn, .main_body .wifi_login_details form .already_code {
+  color: #1976d2;
+  text-align: center;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.main_body .first_form {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.main_body .second_form {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: none;
+}
+
+.main_body .ads_section {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+  overflow: hidden;
+}
+
+.main_body .ads_section .item {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.main_body .ads_section .item img {
+  width: 100%;
+}
+
+.main_body .cong {
+  padding-top: 100px;
+  margin: auto;
+  width: 95%;
+  height: 60vh;
+  text-align: center;
+}
+
+.main_body .cong h1 {
+  color: white;
+  font-size: 4em !important;
+  font-family: dandel;
+}
+
+.main_body .cong p {
+  color: white;
+}
+
+.main_body .cong p span {
+  color: #2FDB40;
+}
+
+footer {
+  margin-top: 20px;
+  color: white;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer p {
+  font-size: 0.75em;
+}
+
+footer .copyright span {
+  font-weight: bolder;
+}
+
+footer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .info span {
+  color: #969696;
+  padding: 0 3px;
+}
+
+.landing_page_ad {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+}
+
+.landing_page_ad img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.landing_page_ad .counter {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 20px;
+  color: white;
+}
+
+.terms_condition {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  display: none;
+}
+
+.terms_condition .container {
+  width: 90%;
+  height: 100%;
+  overflow: scroll;
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+}
+
+.terms_condition .container .terms_condition_close {
+  position: fixed;
+  top: 40px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.terms_condition .container .terms_condition_close span {
+  font-weight: bolder;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+@media (min-width: 360px) {
+  .main_body .wifi_login_details {
+    width: 260px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main_body .ads_section .item {
+    width: auto;
+    height: auto;
+  }
+  .main_body .ads_section .item img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main_body .container {
+    width: 90%;
+  }
+  .main_body .wifi_login_details {
+    margin: 0;
+  }
+  .main_body .wifi_login_details form input[type="text"] {
+    border-bottom: 1px solid #969696;
+  }
+  .main_body .wifi_login_details form ::-webkit-input-placeholder {
+    color: #969696;
+  }
+  .main_body .wifi_login_details form :-ms-input-placeholder {
+    color: #969696;
+  }
+  .main_body .wifi_login_details form ::-ms-input-placeholder {
+    color: #969696;
+  }
+  .main_body .wifi_login_details form ::placeholder {
+    color: #969696;
+  }
+  .main_body .first_form, .main_body .second_form {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .main_body .ads_section {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+  }
+  .main_body .ads_section .item {
+    height: 75vh;
+    position: relative;
+  }
+  .main_body .ads_section .item img {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  footer .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .landing_page_ad img {
+    width: 100vw;
+    height: 100vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .terms_condition .container {
+    height: 90%;
+    margin-top: 20px;
+  }
+  .terms_condition .container .terms_condition_close {
+    top: 40px;
+    right: 60px;
+  }
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=custom.css.map */
